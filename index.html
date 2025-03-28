@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestra Historia, Nuestro Amor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0a0a18;
+      color: white;
+      overflow: hidden;
+      height: 100vh;
+      width: 100vw;
+      position: fixed; /* Prevent body scrolling */
+    }
+
+    /* Utility classes */
+    .hidden {
+      display: none !important;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .flex-col {
+      flex-direction: column;
+    }
+
+    .items-center {
+      align-items: center;
+    }
+
+    .justify-center {
+      justify-content: center;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .relative {
+      position: relative;
+    }
+
+    .absolute {
+      position: absolute;
+    }
+
+    .z-10 {
+      z-index: 10;
+    }
+
+    .z-20 {
+      z-index: 20;
+    }
+
+    .w-full {
+      width: 100%;
+    }
+
+    .h-full {
+      height: 100%;
+    }
+
+    .mx-auto {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .space-y-4 > * + * {
+      margin-top: 1rem;
+    }
+
+    .space-x-2 > * + * {
+      margin-left: 0.5rem;
+    }
+
+    .mb-4 {
+      margin-bottom: 1rem;
+    }
+
+    .mb-6 {
+      margin-bottom: 1.5rem;
+    }
+
+    .mb-8 {
+      margin-bottom: 2rem;
+    }
+
+    .mt-1 {
+      margin-top: 0.25rem;
+    }
+
+    .mt-4 {
+      margin-top: 1rem;
+    }
+
+    .mt-8 {
+      margin-top: 2rem;
+    }
+
+    .mr-2 {
+      margin-right: 0.5rem;
+    }
+
+    .p-4 {
+      padding: 1rem;
+    }
+
+    .p-6 {
+      padding: 1.5rem;
+    }
+
+    .p-8 {
+      padding: 2rem;
+    }
+
+    .px-4 {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .px-8 {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    .py-6 {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+
+    .rounded-md {
+      border-radius: 0.375rem;
+    }
+
+    .rounded-lg {
+      border-radius: 0.5rem;
+    }
+
+    .rounded-full {
+      border-radius: 9999px;
+    }
+
+    .object-cover {
+      object-fit: cover;
+    }
+
+    .overflow-hidden {
+      overflow: hidden;
+    }
+
+    .overflow-y-auto {
+      overflow-y: auto;
+    }
+
+    .inset-0 {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    .top-1\/2 {
+      top: 50%;
+    }
+
+    .left-1\/2 {
+      left: 50%;
+    }
+
+    .left-4 {
+      left: 1rem;
+    }
+
+    .right-4 {
+      right: 1rem;
+    }
+
+    .bottom-4 {
+      bottom: 1rem;
+    }
+
+    .bottom-8 {
+      bottom: 2rem;
+    }
+
+    .transform {
+      transform: translateX(-50%) translateY(-50%);
+    }
+
+    .transform-x {
+      transform: translateX(-50%);
+    }
+
+    .transform-y {
+      transform: translateY(-50%);
+    }
+
+    .transition-all {
+      transition: all 0.3s ease;
+    }
+
+    .scale-125 {
+      transform: scale(1.25);
+    }
+
+    /* Typography */
+    .text-xl {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+
+    .text-2xl {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+
+    .text-3xl {
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+    }
+
+    .text-4xl {
+      font-size: 2.25rem;
+      line-height: 2.5rem;
+    }
+
+    .text-5xl {
+      font-size: 3rem;
+      line-height: 1;
+    }
+
+    .text-sm {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+
+    .font-bold {
+      font-weight: 700;
+    }
+
+    .font-semibold {
+      font-weight: 600;
+    }
+
+    .leading-relaxed {
+      line-height: 1.625;
+    }
+
+    .font-cinzel {
+      font-family: 'Cinzel', serif;
+    }
+
+    .font-poppins {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Colors */
+    .text-white {
+      color: white;
+    }
+
+    .text-amber-100 {
+      color: #fef3c7;
+    }
+
+    .text-amber-200 {
+      color: #fde68a;
+    }
+
+    .text-amber-500 {
+      color: #f59e0b;
+    }
+
+    .text-amber-900 {
+      color: #78350f;
+    }
+
+    .bg-black {
+      background-color: black;
+    }
+
+    .bg-amber-100 {
+      background-color: #fef3c7;
+    }
+
+    .bg-amber-500 {
+      background-color: #f59e0b;
+    }
+
+    .bg-amber-600 {
+      background-color: #d97706;
+    }
+
+    .bg-gray-500 {
+      background-color: #6b7280;
+    }
+
+    .bg-black\/30 {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .bg-black\/40 {
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .bg-black\/50 {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .backdrop-blur-sm {
+      backdrop-filter: blur(4px);
+    }
+
+    .backdrop-blur-md {
+      backdrop-filter: blur(12px);
+    }
+
+    .border {
+      border-width: 1px;
+    }
+
+    .border-2 {
+      border-width: 2px;
+    }
+
+    .border-amber-500 {
+      border-color: #f59e0b;
+    }
+
+    .border-amber-500\/30 {
+      border-color: rgba(245, 158, 11, 0.3);
+    }
+
+    .border-amber-500\/50 {
+      border-color: rgba(245, 158, 11, 0.5);
+    }
+
+    .opacity-30 {
+      opacity: 0.3;
+    }
+
+    .opacity-40 {
+      opacity: 0.4;
+    }
+
+    /* Gradient text */
+    .text-gradient {
+      background: linear-gradient(to right, #fcd34d, #d97706);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.375rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: linear-gradient(to right, #f59e0b, #d97706);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(to right, #d97706, #b45309);
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      border: 1px solid #f59e0b;
+      color: #f59e0b;
+      padding: 0.5rem;
+    }
+
+    .btn-outline:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .btn-icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      padding: 0;
+      border-radius: 9999px;
+    }
+
+    .btn-icon-sm {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    /* Card */
+    .card {
+      background-color: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(245, 158, 11, 0.5);
+      border-radius: 0.5rem;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Navigation dots */
+    .nav-dots {
+      position: fixed; /* Changed from absolute to fixed */
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 0.5rem;
+      z-index: 50; /* Ensure it's above all content */
+    }
+
+    .nav-dot {
+      width: 0.75rem;
+      height: 0.75rem;
+      border-radius: 50%;
+      background-color: #6b7280;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .nav-dot.active {
+      background-color: #f59e0b;
+      transform: scale(1.25);
+    }
+
+    .nav-dot:hover:not(.active) {
+      background-color: #fcd34d;
+    }
+
+    /* Sections */
+    .section {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease;
+      overflow-y: auto; /* Allow scrolling within sections */
+      padding: 2rem 0; /* Add padding to ensure content isn't cut off */
+    }
+
+    .section.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Welcome section */
+    .welcome-title {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      text-align: center;
+      background: linear-gradient(to right, #fcd34d, #d97706);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      padding: 0 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .welcome-title {
+        font-size: 4rem;
+      }
+    }
+
+    /* Moments section */
+    .moment-container {
+      width: 100%;
+      max-width: 48rem;
+      position: relative;
+      padding: 0 1rem;
+      margin-bottom: 4rem; /* Add space for the bottom button */
+    }
+
+    .moment-card {
+      width: 100%;
+      opacity: 0;
+      transition: opacity 0.5s, transform 0.5s;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: scale(0.9);
+      padding: 0 1rem;
+    }
+
+    .moment-card.active {
+      opacity: 1;
+      transform: scale(1);
+      position: relative;
+    }
+
+    .moment-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.25rem;
+      background: linear-gradient(to right, #fcd34d, #d97706);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    @media (min-width: 768px) {
+      .moment-title {
+        font-size: 1.875rem;
+      }
+    }
+
+    .moment-date {
+      color: #fde68a;
+      font-size: 0.875rem;
+      margin-top: 0.25rem;
+    }
+
+    .moment-description {
+      background-color: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(4px);
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      color: #fef3c7;
+      line-height: 1.625;
+    }
+
+    /* Letter section */
+    .letter-container {
+      width: 100%;
+      max-width: 32rem;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .letter-title {
+      font-size: 1.875rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      text-align: center;
+      background: linear-gradient(to right, #fcd34d, #d97706);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    @media (min-width: 768px) {
+      .letter-title {
+        font-size: 2.25rem;
+      }
+    }
+
+    .letter-scroll {
+      width: 8rem;
+      height: 8rem;
+      color: #f59e0b;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .letter-scroll:hover {
+      transform: scale(1.05);
+    }
+
+    .letter-scroll:active {
+      transform: scale(0.95);
+    }
+
+    .letter-content {
+      background-image: url('https://img.freepik.com/free-photo/old-paper-texture_1194-6201.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+      max-height: 60vh;
+      overflow-y: auto;
+      margin-bottom: 1rem; /* Add space at the bottom */
+    }
+
+    .letter-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .letter-header h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #78350f;
+    }
+
+    .letter-body {
+      color: #78350f;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .letter-body p {
+      margin-bottom: 1rem;
+    }
+
+    .letter-signature {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 2rem;
+      color: #78350f;
+    }
+
+    /* Video section */
+    .video-container {
+      width: 100%;
+      max-width: 28rem;
+      padding: 0 1rem;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+    }
+
+    .video-title {
+      font-size: 1.875rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      text-align: center;
+      background: linear-gradient(to right, #fcd34d, #d97706);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    @media (min-width: 768px) {
+      .video-title {
+        font-size: 2.25rem;
+      }
+    }
+
+    .video-wrapper {
+      position: relative;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+      border: 2px solid rgba(255, 215, 0, 0.5);
+      margin-bottom: 2rem; /* Add space for the button */
+    }
+
+    .video-aspect {
+      position: relative;
+      aspect-ratio: 9/16;
+      background-color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .video-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .video-play-btn {
+      background-color: #f59e0b;
+      color: white;
+      border-radius: 9999px;
+      padding: 1.5rem;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .video-play-btn:hover {
+      background-color: #d97706;
+      transform: scale(1.1);
+    }
+
+    .video-play-btn:active {
+      transform: scale(0.9);
+    }
+
+    .video-controls {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      z-index: 20;
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    /* Final section */
+    .final-section-content {
+      max-width: 2xl;
+      padding: 0 1rem;
+      margin: 0 auto;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow-y: auto;
+      max-height: 80vh; /* Limit height to ensure button is visible */
+    }
+
+    .final-title {
+      font-size: 2.25rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(to right, #fcd34d, #d97706);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .final-text {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      color: #fef3c7;
+      max-width: 100%;
+      overflow-wrap: break-word;
+    }
+
+    /* Canvas and particles */
+    #particles-canvas {
+      position: fixed; /* Changed from absolute to fixed */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      background-color: #0a0a18;
+    }
+
+    /* Icons */
+    .icon {
+      display: inline-block;
+      width: 1.5rem;
+      height: 1.5rem;
+      stroke: currentColor;
+      stroke-width: 2;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .icon-sm {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    .icon-lg {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    .icon-xl {
+      width: 8rem;
+      height: 8rem;
+    }
+
+    /* Media queries */
+    @media (max-width: 640px) {
+      .text-5xl {
+        font-size: 2.25rem;
+      }
+      
+      .text-4xl {
+        font-size: 1.875rem;
+      }
+      
+      .text-3xl {
+        font-size: 1.5rem;
+      }
+      
+      .text-2xl {
+        font-size: 1.25rem;
+      }
+      
+      .text-xl {
+        font-size: 1.125rem;
+      }
+      
+      .px-8 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      
+      .py-6 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+
+      /* Smaller letter scroll on mobile */
+      .letter-scroll {
+        width: 6rem;
+        height: 6rem;
+      }
+
+      /* Adjust button position for moments section */
+      .moment-container {
+        margin-bottom: 5rem;
+      }
+
+      /* Make sure buttons are visible */
+      .bottom-8 {
+        bottom: 4rem;
+      }
+
+      /* Ensure navigation dots are visible */
+      .nav-dots {
+        bottom: 0.5rem;
+      }
+
+      /* Smaller video controls */
+      .video-play-btn {
+        padding: 1rem;
+      }
+
+      .icon-lg {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { 
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to { 
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInDown {
+      from { 
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to { 
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes scaleIn {
+      from { 
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to { 
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .animate-fadeIn {
+      animation: fadeIn 1s forwards;
+    }
+
+    .animate-fadeInUp {
+      animation: fadeInUp 0.5s forwards;
+    }
+
+    .animate-fadeInDown {
+      animation: fadeInDown 0.5s forwards;
+    }
+
+    .animate-scaleIn {
+      animation: scaleIn 0.5s forwards;
+    }
+
+    .delay-300 {
+      animation-delay: 0.3s;
+    }
+
+    .delay-500 {
+      animation-delay: 0.5s;
+    }
+
+    .delay-800 {
+      animation-delay: 0.8s;
+    }
+
+    /* Fix for continue buttons */
+    .continue-btn-container {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 1.5rem;
+      margin-bottom: 3rem; /* Space for nav dots */
+      z-index: 20;
+    }
+  </style>
+</head>
+<body class="font-cinzel">
+  <!-- Particle Background -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Welcome Section -->
+  <section id="welcome-section" class="section active">
+    <h1 class="welcome-title animate-fadeInDown delay-500">Nuestra Historia, Nuestro Amor</h1>
+    <button id="start-journey-btn" class="btn btn-primary animate-scaleIn delay-800">
+      <svg class="icon mr-2" viewBox="0 0 24 24">
+        <path d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"></path>
+        <path d="M15 9L15 9.01"></path>
+        <path d="M9 15L9 15.01"></path>
+        <path d="M21 3L3 21"></path>
+      </svg>
+      Comenzar el Viaje
+    </button>
+  </section>
+
+  <!-- Moments Section -->
+  <section id="moments-section" class="section">
+    <div class="moment-container">
+      <!-- Navigation Arrows -->
+      <button id="prev-moment-btn" class="btn btn-outline btn-icon absolute left-4 top-1/2 transform-y z-10">
+        <svg class="icon" viewBox="0 0 24 24">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+      
+      <div id="moments-carousel">
+        <!-- Moments will be inserted here by JavaScript -->
+      </div>
+      
+      <button id="next-moment-btn" class="btn btn-outline btn-icon absolute right-4 top-1/2 transform-y z-10">
+        <svg class="icon" viewBox="0 0 24 24">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+    </div>
+    
+    <div class="continue-btn-container">
+      <button id="to-letter-btn" class="btn btn-primary">
+        Continuar a la Carta Especial
+      </button>
+    </div>
+  </section>
+
+  <!-- Letter Section -->
+  <section id="letter-section" class="section">
+    <div class="letter-container">
+      <h2 class="letter-title animate-fadeInUp">Una Carta Especial Para Ti</h2>
+      
+      <div id="closed-letter" class="flex flex-col items-center animate-fadeIn">
+        <div id="letter-scroll-btn" class="letter-scroll">
+            <svg class="icon-xl" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 9H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 15H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9 21V9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M15 21V9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+          <div class="mt-4 text-amber-200 text-lg font-semibold">
+            Haz clic para abrir
+          </div>
+        </div>
+      </div>
+      
+      <div id="open-letter" class="letter-content hidden animate-scaleIn">
+        <div class="letter-header">
+          <h3>Mi Querida Princesa</h3>
+        </div>
+        
+        <div class="letter-body space-y-4">
+          <p>
+            Desde que entraste en mi vida, cada día ha sido como vivir en un mundo mágico. Tus sonrisas iluminan mis días como las velas flotantes del Gran Comedor de Hogwarts.
+          </p>
+          
+          <p>
+            Contigo he aprendido que la magia más poderosa no viene de una varita, sino del corazón. Cada momento que pasamos juntos queda grabado en mi memoria como un recuerdo en un pensadero, y capaz de ser reproducido a través de mis lagrimas que en sinceridad exprésan lo que siento y vivo contigo, como Snape con la madre de Harry.
+          </p>
+          
+          <p>
+            Me encanta verte emocionada cuando hablas de las cosas que amas, como cuando me haces saber lo que te gusta, cuando te comparto eso, y puedo ver que lo dsifrutas. Tu pasión es contagiosa y me hace amarte cada día más.
+          </p>
+          
+          <p>
+            Quiero que sepas que, como Harry encontró su hogar en Hogwarts, yo he encontrado mi hogar en ti. Eres mi refugio, mi lugar seguro, la magia que mantiene este corazón vivo.
+          </p>
+          
+          <p>
+            Te prometo estar siempre a tu lado, en los momentos buenos y en los difíciles, como un Patronus que aleja cualquier oscuridad... Je t'aime.
+          </p>
+          
+          <p class="letter-signature">
+            Avec tout mon amour,<br>
+            Ta personne préférée
+          </p>
+        </div>
+        
+        <div class="flex justify-center mt-8">
+          <button id="to-video-btn" class="btn btn-primary">
+            <svg class="icon mr-2" viewBox="0 0 24 24">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            Continuar al Video
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section id="video-section" class="section">
+    <div class="video-container">
+      <h2 class="video-title animate-fadeInUp">Nuestros Momentos en Video</h2>
+      
+      <div class="video-wrapper animate-fadeInUp delay-300">
+        <div class="video-aspect">
+          <div id="video-overlay" class="video-overlay">
+            <button id="video-play-btn" class="video-play-btn">
+              <svg class="icon-lg" viewBox="0 0 24 24">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+            </button>
+          </div>
+          
+          <video id="main-video" class="w-full h-full object-cover" playsinline loop>
+            <source src="IMG_9555.MP4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+          </video>
+          
+          <div class="video-controls">
+            <button id="video-pause-btn" class="btn btn-outline btn-icon btn-icon-sm hidden">
+              <svg class="icon-sm" viewBox="0 0 24 24">
+                <rect x="6" y="4" width="4" height="16"></rect>
+                <rect x="14" y="4" width="4" height="16"></rect>
+              </svg>
+            </button>
+            
+            <button id="video-mute-btn" class="btn btn-outline btn-icon btn-icon-sm">
+              <svg id="volume-icon" class="icon-sm" viewBox="0 0 24 24">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="continue-btn-container">
+        <button id="to-final-btn" class="btn btn-primary">
+          <svg class="icon mr-2" viewBox="0 0 24 24">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          Continuar al Mensaje Final
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final Section -->
+  <section id="final-section" class="section">
+    <div class="final-section-content">
+      <h2 class="final-title animate-fadeInUp">Te Pido Perdón...</h2>
+      
+      <p class="final-text animate-fadeInUp delay-300">
+        Perdón por hacerte daño de forma inconciente, perdón por actuar mal sin pensar, te pido perdón por lastimar tu corazón, nunca quise lastimarte, mi objetibo nunca fue ese. Yo quiero que vengas a verme, a verme presentar mi proyecto, algo por lo que trabajé mucho tiempo, algo que de lo que siempre quise que vieras, y que te sientas orgullosa de las cosas que puedo lograr, y tener tu compañía en ese momento, nunca quise quitarte las ilusiones de verme y de disfrutar ese momento. A pesar de todo nunca quise ser un mal chico ni un mal hombre para ti, sabes que a pesar de todo, he hecho muchas cosa que nadie ha hecho por ti, y he estado en muchos momentos contigo, y que a pesar de que me falten bastantes por vivir, pero este momento difícil puede ser desicivo, pero a través de esta oportunidad, espero que lo pienses.
+      </p>
+      
+      <div class="continue-btn-container">
+        <button id="to-welcome-btn" class="btn btn-primary animate-scaleIn delay-500">
+          <svg class="icon mr-2" viewBox="0 0 24 24">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          Volver al Inicio
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation Dots -->
+  <div class="nav-dots">
+    <button class="nav-dot active" data-section="welcome-section"></button>
+    <button class="nav-dot" data-section="moments-section"></button>
+    <button class="nav-dot" data-section="letter-section"></button>
+    <button class="nav-dot" data-section="video-section"></button>
+    <button class="nav-dot" data-section="final-section"></button>
+  </div>
+
+  <script>
+    // Data for moments
+    const moments = [
+      {
+        date: "26 de diciembre de 2024",
+        title: "Nuestra Primera Vez Juntos",
+        description: "Ese día fue nuestra primera vez juntos, la fui a acompañar a comprar un peluche para su hermano, y ella me acompañó a buscar un suéter. Al final, terminé comprando una camisa de un león azul 🦁 jsjsjs. Fue un día simple pero especial, porque desde ese momento supe que disfrutaría cada instante a su lado.",
+        image: "1.jpg?height=600&width=800"
+      },
+      {
+        date: "1 de enero de 2025",
+        title: "Nuestro Año Nuevo Juntos",
+        description: "Puede que no hayamos pasado la Navidad ni el Año Nuevo juntos, pero esos días compartimos la mañana. Para mí, fue especial poder darle el primer 'Feliz Año' del 2025 🎇. Un comienzo mágico para todo lo que vendría.",
+        image: "2.jpg?height=600&width=800"
+      },
+      {
+        date: "19 de enero de 2025",
+        title: "El Día en Que Me Le Declaré 💐",
+        description: "Ese día estaba nervioso pero feliz. Le entregué un ramo de flores 🌹, una carta sincera, llena de referencias a cosas que le gustaban. Sabía que ella era especial, y quería que sintiera lo mucho que significaba para mí. Fue el comienzo de nuestra historia.",
+        image: "3.jpg?height=600&width=800"
+      },
+      {
+        date: "25 de enero de 2025",
+        title: "Un Día Especial",
+        description: "Ese día fue hermoso, la pasamos junto a mi prima y nuestra amiga, a la que llamamos nuestra 'hijita'. Siempre ha creído en nuestra relación y la apoya con todo su corazón. Fue un día lleno de risas, complicidad y amor.",
+        image: "4.jpg?height=600&width=800"
+      },
+      {
+        date: "1 de febrero de 2025",
+        title: "Su Fragancia en Mi Suéter",
+        description: "Ese día, ella salió temprano de la universidad y vino a verme. Fue un momento sencillo pero significativo. Se puso mi suéter y, cuando me lo devolvió, tenía su fragancia impregnada. Durante días, cada vez que lo olía, no podía dejar de pensar en ella.",
+        image: "5.jpg?height=600&width=800"
+      },
+      {
+        date: "8 de febrero de 2025",
+        title: "Nuestra Primera Cita en el Cine 🎬",
+        description: "Nuestra primera cita fue mágica. Fuimos a ver Sonic 3 🎞️ y le compré su tacita de cotufas del Rey León 🦁. Le encantó y la disfrutó muchísimo. Fue el día en que, por primera vez, se quedó mi chaqueta y mis lentes. Un día que siempre recordaré con cariño.",
+        image: "6.jpg?height=600&width=800"
+      },
+      {
+        date: "15 de febrero de 2025",
+        title: "Nuestro Tercer Encuentro y el Intercambio de Regalos 💝",
+        description: "Fuimos al KFC 🍗 junto a mis mejores amigos. Ese día, aprovechamos para darnos nuestros regalos de San Valentín. Le regalé un ramo de corazones ❤️ y ella me dio dos cartas que guardo en un lugar especial de mi cuarto. Además, me escribió una carta con besos y mi fragancia favorita. Fue un día lleno de amor.",
+        image: "7.jpg?height=600&width=800"
+      },
+      {
+        date: "1 de marzo de 2025",
+        title: "Día en que Vimos Coraline en Mi Casa 🎥",
+        description: "Nunca la había visto tan feliz. Amé cada momento de ese día. Escucharla recitar los diálogos de Coraline con tanta emoción me hizo darme cuenta de que estaba enamorado de la persona correcta. Mi niña de ojitos preciosos, mi princesa.",
+        image: "8.jpg?height=600&width=800"
+      }
+    ];
+
+    // DOM Elements
+    const sections = document.querySelectorAll('.section');
+    const navDots = document.querySelectorAll('.nav-dot');
+    const startJourneyBtn = document.getElementById('start-journey-btn');
+    const prevMomentBtn = document.getElementById('prev-moment-btn');
+    const nextMomentBtn = document.getElementById('next-moment-btn');
+    const toLetterBtn = document.getElementById('to-letter-btn');
+    const letterScrollBtn = document.getElementById('letter-scroll-btn');
+    const closedLetter = document.getElementById('closed-letter');
+    const openLetter = document.getElementById('open-letter');
+    const toVideoBtn = document.getElementById('to-video-btn');
+    const videoPlayBtn = document.getElementById('video-play-btn');
+    const videoPauseBtn = document.getElementById('video-pause-btn');
+    const videoMuteBtn = document.getElementById('video-mute-btn');
+    const videoOverlay = document.getElementById('video-overlay');
+    const mainVideo = document.getElementById('main-video');
+    const volumeIcon = document.getElementById('volume-icon');
+    const toFinalBtn = document.getElementById('to-final-btn');
+    const toWelcomeBtn = document.getElementById('to-welcome-btn');
+    const momentsCarousel = document.getElementById('moments-carousel');
+
+    // Current state
+    let currentSection = 0;
+    let currentMoment = 0;
+    let isVideoMuted = false;
+
+    // Initialize moments
+    function initMoments() {
+      momentsCarousel.innerHTML = '';
+      
+      moments.forEach((moment, index) => {
+        const momentCard = document.createElement('div');
+        momentCard.className = `moment-card ${index === 0 ? 'active' : ''}`;
+        momentCard.innerHTML = `
+          <div class="card">
+            <div class="absolute inset-0 z-0 opacity-30">
+              <img src="${moment.image}" alt="${moment.title}" class="w-full h-full object-cover">
+            </div>
+            
+            <div class="relative z-10 p-8">
+              <div class="space-y-4">
+                <div class="flex flex-col items-center text-center mb-6">
+                  <h3 class="moment-title">${moment.title}</h3>
+                  <p class="moment-date">${moment.date}</p>
+                </div>
+                
+                <div class="moment-description">
+                  <p>${moment.description}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+        
+        momentsCarousel.appendChild(momentCard);
+      });
+    }
+
+    // Navigation functions
+    function navigateToSection(index) {
+      // Reset scroll position when changing sections
+      window.scrollTo(0, 0);
+      
+      sections.forEach(section => section.classList.remove('active'));
+      navDots.forEach(dot => dot.classList.remove('active'));
+      
+      sections[index].classList.add('active');
+      navDots[index].classList.add('active');
+      
+      // Pause video when navigating away from video section
+      if (currentSection === 3 && index !== 3) {
+        mainVideo.pause();
+        videoOverlay.classList.remove('hidden');
+        videoPauseBtn.classList.add('hidden');
+      }
+      
+      currentSection = index;
+    }
+
+    function navigateToNextMoment() {
+      const momentCards = document.querySelectorAll('.moment-card');
+      momentCards[currentMoment].classList.remove('active');
+      
+      currentMoment = (currentMoment + 1) % moments.length;
+      
+      momentCards[currentMoment].classList.add('active');
+    }
+
+    function navigateToPrevMoment() {
+      const momentCards = document.querySelectorAll('.moment-card');
+      momentCards[currentMoment].classList.remove('active');
+      
+      currentMoment = (currentMoment - 1 + moments.length) % moments.length;
+      
+      momentCards[currentMoment].classList.add('active');
+    }
+
+    // Video functions
+    function togglePlay() {
+      if (mainVideo.paused) {
+        mainVideo.play();
+        videoOverlay.classList.add('hidden');
+        videoPauseBtn.classList.remove('hidden');
+      } else {
+        mainVideo.pause();
+        videoOverlay.classList.remove('hidden');
+        videoPauseBtn.classList.add('hidden');
+      }
+    }
+
+    function toggleMute() {
+      isVideoMuted = !isVideoMuted;
+      mainVideo.muted = isVideoMuted;
+      
+      if (isVideoMuted) {
+        volumeIcon.innerHTML = `
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <line x1="23" y1="9" x2="17" y2="15"></line>
+          <line x1="17" y1="9" x2="23" y2="15"></line>
+        `;
+      } else {
+        volumeIcon.innerHTML = `
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+        `;
+      }
+    }
+
+    // Particle animation
+    function initParticles() {
+      const canvas = document.getElementById('particles-canvas');
+      const ctx = canvas.getContext('2d');
+      
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      
+      const particles = [];
+      const particleCount = 100;
+      
+      class Particle {
+        constructor() {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height;
+          this.size = Math.random() * 3 + 1;
+          this.speedX = Math.random() * 0.5 - 0.25;
+          this.speedY = Math.random() * 0.5 - 0.25;
+          this.color = `rgba(${255}, ${215 + Math.random() * 40}, ${0}, ${Math.random() * 0.8 + 0.2})`;
+        }
+        
+        update() {
+          this.x += this.speedX;
+          this.y += this.speedY;
+          
+          if (this.x > canvas.width) this.x = 0;
+          else if (this.x < 0) this.x = canvas.width;
+          
+          if (this.y > canvas.height) this.y = 0;
+          else if (this.y < 0) this.y = canvas.height;
+        }
+        
+        draw() {
+          ctx.fillStyle = this.color;
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+      
+      function init() {
+        for (let i = 0; i < particleCount; i++) {
+          particles.push(new Particle());
+        }
+      }
+      
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        for (let i = 0; i < particles.length; i++) {
+          particles[i].update();
+          particles[i].draw();
+        }
+        
+        requestAnimationFrame(animate);
+      }
+      
+      window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      });
+      
+      init();
+      animate();
+    }
+
+    // Event listeners
+    function initEventListeners() {
+      // Navigation dots
+      navDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => navigateToSection(index));
+      });
+      
+      // Buttons
+      startJourneyBtn.addEventListener('click', () => navigateToSection(1));
+      prevMomentBtn.addEventListener('click', navigateToPrevMoment);
+      nextMomentBtn.addEventListener('click', navigateToNextMoment);
+      toLetterBtn.addEventListener('click', () => navigateToSection(2));
+      
+      letterScrollBtn.addEventListener('click', () => {
+        closedLetter.classList.add('hidden');
+        openLetter.classList.remove('hidden');
+      });
+      
+      toVideoBtn.addEventListener('click', () => navigateToSection(3));
+      
+      videoPlayBtn.addEventListener('click', togglePlay);
+      videoPauseBtn.addEventListener('click', togglePlay);
+      videoMuteBtn.addEventListener('click', toggleMute);
+      
+      toFinalBtn.addEventListener('click', () => navigateToSection(4));
+      toWelcomeBtn.addEventListener('click', () => navigateToSection(0));
+      
+      // Video ended event
+      mainVideo.addEventListener('ended', () => {
+        videoOverlay.classList.remove('hidden');
+        videoPauseBtn.classList.add('hidden');
+      });
+    }
+
+    // Initialize everything
+    function init() {
+      initParticles();
+      initMoments();
+      initEventListeners();
+    }
+
+    // Start the application
+    window.addEventListener('DOMContentLoaded', init);
+  </script>
+</body>
+</html>
